@@ -2,6 +2,7 @@ apiVersion: example.com/v1alpha1
 kind: Rollout
 metadata:
   name: apache-ro
+  namespace: apache
 spec:
   template:
     metadata:
