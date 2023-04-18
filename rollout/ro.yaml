@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd:2.4.57
+        image: httpd:2.4.58
   selector:
     matchLabels:
       app: apache
@@ -19,5 +19,5 @@ spec:
   strategy:
     canary:
       steps:
-      - setWeight: 50
+      - setWeight: 20
       - pause: {}
