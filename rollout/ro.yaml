@@ -1,5 +1,5 @@
-apiVersion: argoproj.io/v1alpha1 
-kind: Rollout
+apiVersion: argoproj.io/v1alpha1  # the version of the Argo Rollouts API
+kind: Rollout      #specifies the type of resource
 metadata:
   name: apache-ro
   namespace: apache-ns
@@ -12,11 +12,11 @@ spec:
       containers:
       - name: apache
         image: httpd:2.4.54
-  selector:
+  selector:      # used to match the Pods that the Rollout is managing
     matchLabels:
       app: apache
-  replicas: 10
-  strategy:
+  replicas: 10           #the desired number of replicas for the Rollout
+  strategy:     #specifies the deployment strategy for the Rollout
     canary:
       steps:
       - setWeight: 50
