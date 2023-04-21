@@ -19,5 +19,5 @@ spec:
   strategy:     #specifies the deployment strategy for the Rollout
     canary:
       steps:
-      - setWeight: 50
+      - setWeight: 60
       - pause: {}     #This allows time for observation and testing before continuing with the full deployment.
