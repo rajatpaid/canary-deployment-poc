@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd:2.4.54
+        image: httpd:2.4.56
   selector:      # used to match the Pods that the Rollout is managing
     matchLabels:
       app: apache
