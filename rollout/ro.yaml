@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd:2.4.54
+        image: httpd:2.4.56
   selector:      # used to match the Pods that the Rollout is managing
     matchLabels:
       app: apache
@@ -19,5 +19,5 @@ spec:
   strategy:     #specifies the deployment strategy for the Rollout
     canary:
       steps:
-      - setWeight: 50
+      - setWeight: 25
       - pause: {}     #This allows time for observation and testing before continuing with the full deployment.
