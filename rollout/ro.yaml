@@ -15,7 +15,7 @@ spec:
   selector:      # used to match the Pods that the Rollout is managing
     matchLabels:
       app: apache
-  replicas: 2           #the desired number of replicas for the Rollout
+  replicas: 4           #the desired number of replicas for the Rollout
   strategy:     #specifies the deployment strategy for the Rollout
     canary:
       steps:
